@@ -18,6 +18,7 @@
           <th scope="col">Employee Id</th>
           <th scope="col">Score out of 90</th>
           <th scope="col">Score out of 10</th>
+          <th scope="col">No of times been reviewed</th>
           <th scope="col">Final rating</th>
         </tr>
       </thead>
@@ -27,6 +28,7 @@
           <th scope="row"><%=user.id_no%></th>
           <td><%=user.rating90.toFixed(2)%></td>
           <td><%=user.rating10.toFixed(2)%></td>
+          <td><%=user.x90   %></td>
           <td><%=(user.rating90+user.rating10).toFixed(2)%></td>
         </tr>
         <%}%>
