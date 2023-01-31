@@ -1,0 +1,88 @@
+<% layout('../layouts/boilerplate2')%>
+<div class="container ">
+    <div class="row">
+      <div class="col-5">
+        <h5 class="card-title mb-4">Employee ID: <%=id%></h5>
+        <%for(let message of doc[0].messages){%>
+        <div class="card w-75 mb-3">
+          <div class="card-body">
+            <!-- <h5 class="card-title">Card title</h5> -->
+            <p class="card-text">
+              <%=message%>
+            </p>
+            <!-- <a href="#" class="btn btn-primary">Button</a> -->
+          </div>
+        </div>
+        <%}%>
+        
+        
+        <form action="/route_back" method="POST">
+          <div class="">
+            <input type="submit" value="Submit" class="btn btn-primary mt-3 btn-block mb-4">
+          </div>
+      </div>
+      <div class="col-7">
+        <div class="row mb-3">
+          <div class="col-sm-6 mb-3">
+            <div class="card w-75">
+              <div class="card-body">
+                <div class="h-25">
+                <img class="card-img-top mb-3" src="<%=others[0].image%>" alt="Card image cap" height="98em">
+              </div>
+                <p class="card-text text-center" >Employee ID: <%=others[0].id_no%></p>
+                <div class="d-flex justify-content-center">
+                  <input type="text" id="f1name" name="f<%=others[0].id_no%>name" placeholder="Give rating" class="text-center" required>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card w-75">
+              <div class="card-body">
+                <img class="card-img-top mb-3" src="<%=others[1].image%>" alt="Card image cap" height="98em">
+                <p class="card-text text-center"">Employee ID: <%=others[1].id_no%></p>
+                <div class="d-flex justify-content-center">
+                <input type="text" id="f2name" name="f<%=others[1].id_no%>name" placeholder="Give rating" class="text-center" required>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card w-75">
+              <div class="card-body">
+                <img class="card-img-top mb-3" src="<%=others[2].image%>" alt="Card image cap" height="98em">
+                <p class="card-text text-center"">Employee ID: <%=others[2].id_no%></p>
+                <div class="d-flex justify-content-center">
+                  <input type="text" id="f3name" name="f<%=others[2].id_no%>name" placeholder="Give rating" class="text-center" required>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card w-75">
+              <div class="card-body">
+                <img class="card-img-top mb-3" src="<%=others[3].image%>" alt="Card image cap" height="98em">
+                <p class="card-text text-center"">Employee ID: <%=others[3].id_no%></p>
+                <div class="d-flex justify-content-center">
+                  <input type="text" id="f4name" name="f<%=others[3].id_no%>name" placeholder="Give rating" class="text-center" required>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="">
+          <input type="submit" value="Submit" class="btn btn-primary mt-3 btn-block mb-4">
+        </div> -->
+        
+
+      </div>
+
+      
+    </div>
+  </div>
+
+
+  

@@ -1,0 +1,36 @@
+<% layout('../layouts/boilerplate')%>
+<%function compare( a, b ) {%>
+   <% if ( a.rating90+a.rating10 < b.rating90+b.rating10 ){%>
+     <% return 1;%>
+   <% }%>
+    <%if ( a.rating90+a.rating10 > b.rating90+b.rating10 ){%>
+     <% return -1;%>
+   <% }%>
+    <%return 0;%>
+  <%}%>
+
+  <%documents.sort(compare)%>
+
+<div class="container table-responsive py-5"> 
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Employee Id</th>
+          <th scope="col">Score out of 90</th>
+          <th scope="col">Score out of 10</th>
+          <th scope="col">Final rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%for(let user of documents){%>
+        <tr>
+          <th scope="row"><%=user.id_no%></th>
+          <td><%=user.rating90.toFixed(2)%></td>
+          <td><%=user.rating10.toFixed(2)%></td>
+          <td><%=(user.rating90+user.rating10).toFixed(2)%></td>
+        </tr>
+        <%}%>
+      </tbody>
+    </table>
+    </div>
+    
